@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
+import { useState } from "react";
+import Sayac from "./component/ClassComp"
+import Paper from "./component/functionComp";
+import Search from "./component/refTest";
+import FilterUser from "./component/filterUser";
+function App() 
+{
+  const[showSayac ,SetShowSayac] = useState(true)
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {/* <button onClick={()=>SetShowSayac(!showSayac)}>{showSayac ? "gizle" : "göster"}</button>
+        {
+          showSayac &&  <Paper/>} */}
+
+      {/* <Search/> */}
+      <FilterUser/>
     </div>
-  );
+  )
 }
+
 
 export default App;
